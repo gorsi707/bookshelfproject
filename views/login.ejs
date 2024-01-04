@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="stylesheets/global.css" />
+    <link rel="stylesheet" href="stylesheets/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="registerform">
+      <h2 class="register__title">Login Now!</h2>
+
+      <div class="regform">
+        <form class="form" action="/login" method="post">
+          <input
+            type="email"
+            class="inputitem"
+            placeholder="Enter Your Email Address"
+            id="email"
+            name="email"
+            required
+          />
+
+          <input
+            type="password"
+            class="inputitem"
+            placeholder="Enter Your Password"
+            id="password"
+            name="password"
+            required
+          />
+
+          <button class="btn submi__btn" type="submit">Login</button>
+        </form>
+      </div>
+      <p class="login__btn">
+        Don't have an account? <a href="/register">Sign Up</a>
+      </p>
+    </div>
+  </body>
+</html>

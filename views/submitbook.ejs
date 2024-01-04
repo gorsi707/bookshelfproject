@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Your Book, Reviews and Notes</title>
+    <link rel="stylesheet" href="stylesheets/global.css" />
+    <link rel="stylesheet" href="stylesheets/register.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="registerform">
+      <h2 class="register__title">Submit Your Book, Reviews and Notes</h2>
+      <p>* All Fileds are Required</p>
+
+      <div class="regform">
+        <form class="form" action="/submitbook" method="post">
+          <input
+            type="text"
+            class="inputitem"
+            placeholder="Enter Book Title"
+            id="bookTitle"
+            name="bookTitle"
+            required
+          />
+
+          <input
+            type="text"
+            class="inputitem"
+            placeholder="Enter Author Name"
+            id="author"
+            name="author"
+            required
+          />
+
+          <input
+            type="text"
+            class="inputitem"
+            placeholder="Enter The ISBN Number (for Picture)"
+            id="isbn"
+            name="isbn"
+            required
+          />
+          <p>Select Stars for Your Rating</p>
+          <div class="rating">
+            <input type="radio" id="star1" name="stars" value="5" />
+            <label for="star1"></label>
+            <input type="radio" id="star2" name="stars" value="4" />
+            <label for="star2"></label>
+            <input type="radio" id="star3" name="stars" value="3" />
+            <label for="star3"></label>
+            <input type="radio" id="star4" name="stars" value="2" />
+            <label for="star4"></label>
+            <input type="radio" id="star5" name="stars" value="1" />
+            <label for="star5"></label>
+          </div>
+
+          <textarea
+            type="message"
+            class="inputitem"
+            placeholder="Type Your Review Here"
+            id="review"
+            name="review"
+            required
+          ></textarea>
+
+          <textarea
+            type="message"
+            class="inputitem"
+            placeholder="Type Your Notes Here"
+            id="notes"
+            name="notes"
+            required
+          ></textarea>
+
+          <button class="btn submi__btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+header {
+  background-color: var(--white-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.logo {
+  font-family: "Monda", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.header__btn {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header__link {
+  text-decoration: none;
+  color: var(--white-color);
+}

@@ -1,0 +1,11 @@
+{
+  "development": {
+    "database": "BookShelf",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "#3007Ninetynine",
+    "dialect": "postgres",
+    "logging": false
+  }
+}
