@@ -13,6 +13,7 @@ module.exports = {
     try {
       const validator = await schema.validateAsync(req.body);
       await userService.register(validator);
+      res.redirect("/sign-in");
     } catch (error) {
       console.log(error);
     }
@@ -28,7 +29,14 @@ module.exports = {
         });
       }
 
-      res.render("user", { name: user.response.fullName });
+      const userid = parseInt(user.response.id);
+
+      const getbooks = await userService.getbooks(userid);
+
+      res.render("user", {
+        name: user.response.fullName,
+        books: getbooks.response,
+      });
     } catch (error) {
       console.log(error);
     }

@@ -70,4 +70,22 @@ module.exports = {
       };
     }
   },
+
+  deletebook: async (id) => {
+    try {
+      const deletedbook = await books.destroy({
+        where: {
+          id: id,
+        },
+      });
+
+      return {
+        response: deletedbook,
+      };
+    } catch (error) {
+      return {
+        error: error,
+      };
+    }
+  },
 };

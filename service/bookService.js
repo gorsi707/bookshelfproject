@@ -72,4 +72,17 @@ module.exports = {
       };
     }
   },
+
+  deletebook: async (id) => {
+    try {
+      const deletedbook = await bookModel.deletebook(id);
+      return {
+        response: deletedbook.response,
+      };
+    } catch (error) {
+      return {
+        error: error,
+      };
+    }
+  },
 };

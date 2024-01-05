@@ -12,4 +12,6 @@ router.get("/bookdetails/:id", bookController.singlebook);
 
 router.post("/notechanges", bookController.editNotes);
 
+router.post("/deletebook/:id", bookController.deletebook);
+
 module.exports = router;

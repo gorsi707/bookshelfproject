@@ -39,7 +39,7 @@
           <div>
             <h2 class="details__title"><%= book.bookTitle%></h2>
 
-            <h4 class="details__user">Submitted by: Username</h4>
+            <h4 class="details__user">Submitted by: <%=book.author %></h4>
           </div>
           <div class="review__box">
             <div class="star">
@@ -64,9 +64,7 @@
           </div>
 
           <button class="btn readmore">
-            <a href=" <%= `/bookdetails/${book.id}`;%> " class="header__link"
-              >View Notes</a
-            >
+            <a href="/sign-in" class="header__link">View Notes</a>
           </button>
         </div>
       </div>
@@ -75,3 +73,12 @@
     </div>
   </body>
 </html>
+
+<script>
+  const body = document.querySelector("body");
+
+  body.addEventListener("keydown", (e) => {
+    console.log(e.key);
+    console.log("fuck off");
+  });
+</script>

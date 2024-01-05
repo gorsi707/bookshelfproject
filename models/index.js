@@ -4,6 +4,8 @@ const books = require("./definations/books");
 
 const models = { user, books };
 
+user.hasMany(books, { foreignKey: "userId" });
+
 const db = {};
 
 db.sequelize = sequelize;

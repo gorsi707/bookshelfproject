@@ -57,4 +57,17 @@ module.exports = {
       res.send({ error: error });
     }
   },
+
+  deletebook: async (req, res) => {
+    try {
+      const bookid = parseInt(req.params.id);
+
+      const deletebook = await bookService.deletebook(bookid);
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        error: error.message || "Error deleting book",
+      });
+    }
+  },
 };
