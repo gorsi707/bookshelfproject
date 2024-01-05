@@ -10,8 +10,6 @@ router.get("/submitform", (req, res) => {
 
 router.get("/bookdetails/:id", bookController.singlebook);
 
-router.post("/notechanges", (req, res) => {
-  console.log("i got hit", req.body);
-});
+router.post("/notechanges", bookController.editNotes);
 
 module.exports = router;

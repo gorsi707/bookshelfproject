@@ -53,4 +53,21 @@ module.exports = {
       };
     }
   },
+
+  editNotes: async (bookid, notes) => {
+    try {
+      const bookNotes = await models.books.update(
+        { notes: notes },
+        { where: { id: bookid } }
+      );
+
+      return {
+        response: bookNotes,
+      };
+    } catch (error) {
+      return {
+        error: error.message,
+      };
+    }
+  },
 };
